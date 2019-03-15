@@ -13,7 +13,18 @@
 			</swiper-item>
 			 
 		</swiper>
-		<image  src="../../static/1.png"></image>
+		<view class="free_grid">
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
+			
+		</view>
+		
 	</view>
 </template>
 
@@ -34,5 +45,23 @@
 </script>
 
 <style>
-
+	.free_grid {
+		width:100%;
+		overflow: auto;
+		display: flex;
+		flex-direction:row;
+		flex-wrap: wrap;
+		flex-grow: ;
+	}
+	.free_grid_1{
+		width: 25%;
+		text-align: center;
+		margin-bottom:5px;
+	}
+	.free_grid_1 .img{
+		width:50%;
+	}
+	.free_grid_1 .name{
+		margin-top:-5px;
+	}
 </style>

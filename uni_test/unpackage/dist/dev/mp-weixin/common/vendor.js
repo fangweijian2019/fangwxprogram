@@ -65,6 +65,7 @@ function getRootVueVm(page) {
       // 挂载Vue对象到page上
       this.$vm = app;
       var rootVueVM = app.$root;
+      rootVueVM.__wxExparserNodeId__ = this.__wxExparserNodeId__//fixed by xxxxxx(createIntersectionObserver)
       rootVueVM.__wxWebviewId__ = this.__wxWebviewId__//fixed by xxxxxx(createIntersectionObserver)
       
       //初始化mp对象
@@ -5237,6 +5238,8 @@ try {
             if (mpType === "app") {
                 callHook$1(this, "onLaunch", mp.appOptions)
             } else {
+                this.__wxWebviewId__ = rootVueVM.__wxWebviewId__
+                this.__wxExparserNodeId__ = rootVueVM.__wxExparserNodeId__
                 callHook$1(this, "onLoad", mp.query)
                 // callHook$1(this, "onReady") // 避免 onReady触发两次
             }
@@ -5358,6 +5361,7 @@ try {
                 // 生命周期函数--监听页面加载
                 onLoad: function onLoad(query) {
                     rootVueVM.__wxWebviewId__ = this.__wxWebviewId__//fixed by xxxxxx(createIntersectionObserver)
+                    rootVueVM.__wxExparserNodeId__ = this.__wxExparserNodeId__
                     mp.page = this
                     mp.query = query
                     mp.status = "load"
@@ -5372,6 +5376,7 @@ try {
                 // 生命周期函数--监听页面显示
                 onShow: function onShow() {
                     rootVueVM.__wxWebviewId__ = this.__wxWebviewId__//fixed by xxxxxx(createIntersectionObserver)
+                    rootVueVM.__wxExparserNodeId__ = this.__wxExparserNodeId__
                     mp.page = this
                     mp.status = "show"
                 
@@ -5935,10 +5940,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "E:\\nopass\\study\\hbuilder\\uni_test\\pages.json":
-/*!****************************************************!*\
-  !*** E:/nopass/study/hbuilder/uni_test/pages.json ***!
-  \****************************************************/
+/***/ "E:\\nopass\\study\\hbuilder\\uni_test\\uni_test\\pages.json":
+/*!*************************************************************!*\
+  !*** E:/nopass/study/hbuilder/uni_test/uni_test/pages.json ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

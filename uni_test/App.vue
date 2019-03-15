@@ -15,4 +15,10 @@
 <style>
 	/*每个页面公共css */
 	@import './common/uni.css';
+	
+	
+	uni-page-head
+    {
+        display: none;
+    }
 </style>
