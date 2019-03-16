@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-        <image class="logo" src="../../static/logo.png"></image>
+        <navigator  open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover"><image class="logo" src="../../static/logo.png"></image></navigator>
 		<view>
             <text class="title">{{title}}</text>
         </view>

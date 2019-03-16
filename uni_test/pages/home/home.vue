@@ -14,17 +14,55 @@
 			 
 		</swiper>
 		<view class="free_grid">
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			<view class="free_grid_1"><image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view></view>
-			
+			<view class="free_grid_1">
+				<navigator  url="/pages/index/index" hover-class="navigator-hover">
+					<image class="img" mode='widthFix'  src="../../static/1.png"></image>
+					<view class="name">bbb</view>
+				</navigator>
+			</view>
+			<view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view>
+			<view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view><view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view><view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view><view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view><view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view><view class="free_grid_1">
+				<navigator open-type="switchTab" url="/pages/cart/cart" hover-class="navigator-hover">
+				<image class="img" mode='widthFix'  src="../../static/1.png"></image><view class="name">bbb</view>
+				</navigator>
+			</view>
 		</view>
-		
+		<view class="uni-padding-wrap">
+			<view class="uni-swiper-msg">
+				<view class="uni-swiper-msg-icon">
+					<image src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png" mode="widthFix"></image>
+				</view>
+				<swiper vertical="true" autoplay="true" circular="true" interval="3000">
+					<swiper-item v-for="(item, index) in msg" :key="index">
+						<navigator>{{item}}</navigator>
+					</swiper-item>
+				</swiper>
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -38,7 +76,12 @@
 				indicatorDots: true,
 				autoplay: true,
 				interval: 2000,
-				duration: 500
+				duration: 500,
+				msg : [
+					'uni-app行业峰会频频亮相，开发者反响热烈',
+					'DCloud完成B2轮融资，uni-app震撼发布',
+					'36氪热文榜推荐、CSDN公号推荐 DCloud CEO文章'
+				]
 			};
 		}
 	}
