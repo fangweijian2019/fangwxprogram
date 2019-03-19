@@ -21,4 +21,11 @@
     {
         display: none;
     }
+	.uni-navbar-header .uni-navbar-header-btns:first-child{
+		padding-left:10px !important;
+		width:32px !important;
+	}
+	uni-checkbox .uni-checkbox-input.uni-checkbox-input-checked {
+		background: #007AFF;
+	}
 </style>
