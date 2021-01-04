@@ -16,7 +16,7 @@
 			<block slot="right">
 				<view class="navbarFreeIcon">
 					<uni-icon type="chat" color="#eee" size="22"></uni-icon>
-					<text>信息 </text>
+					<text>信息 2</text>
 				</view>
 			</block>
 		</uni-nav-bar>
